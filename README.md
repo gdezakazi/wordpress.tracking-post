@@ -3,7 +3,7 @@
 ## Установка
 
 1) В панели администратора Wordpress выберите пункт меню `Плагины` - `Добавить новый`
-2) Загрузите файл [`1.3.tr.gdezakaziru.ocmod.zip`](https://github.com/gdezakazi/wordpress.tracking-post/releases/download/v1.0/gde_zakazy.zip)
+2) Загрузите файл [`gde_zakazy.zip`](https://github.com/gdezakazi/wordpress.tracking-post/releases/download/v1.0/gde_zakazy.zip)
 3) Нажмите на кнопку `Загрузить плагин` и выберите ранее загруженный файл плагина
 4) На странице `Плагины` - `Установленные плагины` найдите модуль `ГДЕЗАКАЗЫ.РФ для WooCommerce` и нажмите кнопку активации модуля
 5) После установки зайдите в настройки модуля и настройте модуль
