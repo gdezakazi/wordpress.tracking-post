@@ -1,11 +1,11 @@
 <?php
 /*
-	Plugin Name: ГДЕЗАКАЗЫ.РФ для WooCommerce
-	Plugin URI: http://гдезаказы.рф/
+	Plugin Name: GDEZAKAZI.RU
+	Plugin URI: https://xn--80aahefmcw9m.xn--p1ai/plugins
 	Description: Трекинг заказов
 	Version: 1.0
 	Author: гдезаказы.рф
-	Author URI: http://гдезаказы.рф/
+	Author URI: https://github.com/gdezakazi/wordpress.tracking-post
 
 	Copyright: © гдезаказы.рф
 */
