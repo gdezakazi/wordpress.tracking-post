@@ -1,0 +1,74 @@
+.gdezakazy-form {
+    float: left;
+    width: 900px;
+}
+.gdezakazy-memo {
+    margin-left: 900px;
+    background: #d8e7e8;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.gdezakazy-version {
+    clear: both;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+@media (max-width: 1480px) {
+    .gdezakazy-form {
+        width: 700px;
+    }
+    .gdezakazy-memo {
+        margin-left: 700px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .gdezakazy-form {
+        float: none;
+        width: auto;
+    }
+    .gdezakazy-memo {
+        margin-left: 0;
+    }
+}
+
+.gdezakazy-form input[type=text] {
+    width: 100%;
+}
+
+.gdezakazy-fields {
+    border: 1px solid #ccc;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.gdezakazy-fields label{
+    display: block;
+}
+
+.gdezakazy-status select {
+    width: 50%
+}
+.gdezakazy-status label {
+    width: 40%;
+    margin-left: 15px;
+}
+
+.gdezakazy-status textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.gdezakazy-status .small {
+    font-size: 12px;
+}
+.gdezakazy-status .small code{
+    font-size: 12px;
+    color: #a00;
+    background: #fff;
+    border-radius: 3px;
+}

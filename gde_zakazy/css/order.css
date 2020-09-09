@@ -1,0 +1,10 @@
+#gdezakazy_add_form {
+
+}
+
+.gdezakazy-error {
+    background: #ffa69a;
+    border-radius: 5px;
+    border: 1px solid #ff6348;
+    padding: 5px;
+}
