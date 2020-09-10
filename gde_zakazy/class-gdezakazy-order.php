@@ -165,7 +165,7 @@ class GdeZakazy_Order
 
     public function ajaxArchiveTrack()
     {
-        $order_id = $_POST['order_id'];
+        $order_id = intval($_POST['order_id']);
         $order = wc_get_order($order_id);
         if (empty($order)) {
             wp_die('Order is not found');
@@ -190,8 +190,8 @@ class GdeZakazy_Order
 
     public function ajaxAddTrack()
     {
-        $track = $_POST['track'];
-        $order_id = $_POST['order_id'];
+        $track = trim($_POST['track']);
+        $order_id = intval($_POST['order_id']);
         $order = wc_get_order($order_id);
         if (empty($order)) {
             wp_die('Order is not found');
@@ -199,6 +199,9 @@ class GdeZakazy_Order
         $orderData = $order->get_data();
         $error = null;
         try {
+            if (!preg_match('/^[\w\-_]{5,40}$/', $track)) {
+                throw new Exception('Неправильный формат трека');
+            }
             if ($order->get_meta('_gdezakazy_track') && $order->get_meta('_gdezakazy_status') != 'archive') {
                 throw new Exception('Трек уже добавлен');
             }

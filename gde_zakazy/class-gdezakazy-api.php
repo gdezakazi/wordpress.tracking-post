@@ -8,31 +8,27 @@ class GdeZakazy_Api
 
     public function request($token, $method, $path, $data = [])
     {
-        $ch = curl_init();
         if (!is_array($data)) {
             $data = [];
         }
         if ($method == 'GET') {
             $data['token'] = $token;
             $path .= '?'.http_build_query($data);
+            $response = wp_remote_get(self::BASE.$path, [
+                'timeout' => 5,
+            ]);
         } else {
             $path .= '?'.http_build_query(['token' => $token]);
-            curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+            $response = wp_remote_post(self::BASE.$path, [
+                'method' => $method,
+                'timeout' => 5,
+                'body' => $data,
+            ]);
         }
-        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; API client)');
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_URL, self::BASE.$path);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        $response = curl_exec($ch);
-        $return = [
-            'code' => curl_getinfo($ch, CURLINFO_RESPONSE_CODE),
-            'data' => json_decode($response, true),
+        return [
+            'code' => wp_remote_retrieve_response_code($response),
+            'data' => json_decode(wp_remote_retrieve_body($response), true),
         ];
-        curl_close($ch);
         return $return;
     }
 
