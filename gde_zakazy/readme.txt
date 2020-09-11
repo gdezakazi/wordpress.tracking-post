@@ -1,13 +1,17 @@
 === GDEZAKAZI.RU ===
 Contributors: kabetov
 Tags: отслеживание посылок, отслеживание посылки, Почта России, отслеживание, трекинг, трэкинг
-Requires at least: 5.5
+Requires at least: 5.1
 Requires PHP: 5.6
 License: GPLv2
-License URI: https://wikipedia.org/wiki/GNU_General_Public_License#GPL_v2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ГДЕЗАКАЗЫ.РФ - отслеживание посылок Почта России v.1.0
 Разработано ГДЕЗАКАЗЫ.РФ
+
+Модуль использует функционал сервиса ГДЕЗАКАЗЫ.РФ https://xn--80aahefmcw9m.xn--p1ai/
+Правила использования сервиса доступны по ссылке https://xn--80aahefmcw9m.xn--p1ai/docs/user.pdf
+Политика конфиденциальности сервиса доступна по ссылке https://xn--80aahefmcw9m.xn--p1ai/docs/privat.pdf
 
 1. Предназначение сервиса ГДЕЗАКАЗЫ.РФ
 • Облачный сервис отслеживания посылок Почты России для интернет магазинов создан для увеличения прибыли за счет:
