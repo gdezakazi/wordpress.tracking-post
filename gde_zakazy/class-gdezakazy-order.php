@@ -190,7 +190,7 @@ class GdeZakazy_Order
 
     public function ajaxAddTrack()
     {
-        $track = trim($_POST['track']);
+        $track = sanitize_text_field($_POST['track']);
         $order_id = intval($_POST['order_id']);
         $order = wc_get_order($order_id);
         if (empty($order)) {
